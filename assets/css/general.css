@@ -1,0 +1,267 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 16px/22px Arial, sans-serif;
+    color: var(--color-text);
+}
+
+p {
+    font: 16px/22px Arial, sans-serif;
+}
+
+h1 {
+    font: 28px/32px Helvetica, sans-serif;
+}
+
+h2 {
+    font: 26px/30px Helvetica, sans-serif;
+}
+
+h3 {
+    font: 24px/30px Helvetica, sans-serif;
+}
+
+h4 {
+    font: 20px/28px Helvetica, sans-serif;
+}
+
+h5 {
+    font: 18px/26px Helvetica, sans-serif;
+}
+
+h6 {
+    font: bold 16px/22px Helvetica, sans-serif;
+}
+
+p:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top: 0;
+}
+
+p:last-child,
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    font: bold 16px/22px Arial, sans-serif;
+    color: var(--color-secondary);
+}
+
+a:hover {
+    color: var(--color-secondary-lighter);
+    text-decoration: underline;
+    transition: 0.3s all ease-in-out;
+}
+
+img {
+    width: 100%;
+}
+
+blockquote {
+    border-left: 3px solid var(--color-secondary);
+    padding: 8px 24px;
+    font: 18px/26px Arial, sans-serif;
+}
+
+cite {
+    margin-top: 8px;
+    font: 16px/24px Arial, sans-serif;
+    display: block;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.grid-page {
+    display: block;
+}
+
+.grid-archive {
+    display: block;
+}
+
+.blog-feed-grid {
+    display: block;
+}
+
+.section,
+.main-archive,
+.sidebar {
+    position: relative;
+    padding: 36px 0;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+}
+
+.social-links a {
+    margin-right: 8px;
+}
+
+.social-links a:last-child {
+    margin: 0;
+}
+
+.author-headshot {
+    border-radius: 100%;
+}
+
+.section-content {
+    position: relative;
+    z-index: 100;
+}
+.section-background {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100vw;
+    margin-left: -50vw;
+    height: 100%;
+}
+.header {
+    position: relative;
+    grid-area: hd;
+    padding: 24px 0;
+}
+.header-background {
+    background-color: var(--color-primary-lighter);
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.branding img {
+    max-width: 80px;
+}
+.navigation {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-link {
+    margin-right: 12px;
+}
+
+.navigation-link a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--color-menu);
+    text-decoration: none;
+}
+
+.page-title {
+
+}
+
+.page-title-background {
+    background-color: var(--color-shade-lightest);
+}
+
+.page-title-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-page,
+.sidebar {
+    padding: 0 36px;
+}
+
+.main-archive {
+    padding: 36px;
+}
+
+.footer {
+    position: relative;
+    padding: 16px 0;
+    grid-area: ft;
+    color: var(--color-text-light);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-background {
+    background-color: var(--color-shade-darker);
+}
+
+.newsletter {
+    padding: 74px 0;
+}
+
+.newsletter-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+}
+
+input[type="text"] {
+    border: 1px solid var(--color-border);
+    padding: 12px 24px;
+    margin-bottom: 8px;
+}
+
+input::placeholder {
+    color: var(--color-primary-lighter);
+}
+
+button,
+.button {
+    border: 1px solid var(--color-border);
+    padding: 12px 24px;
+    color: var(--color-primary-darker);
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background: var(--color-primary-lighter);
+    transition: 0.3s all ease-in-out;
+}
+
