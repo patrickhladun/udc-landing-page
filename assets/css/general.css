@@ -116,6 +116,10 @@ figure {
     padding: 36px 0;
 }
 
+.section {
+    padding: 200px 0;
+}
+
 .author-details {
     display: flex;
     flex-direction: column;
@@ -184,10 +188,6 @@ figure {
     text-transform: uppercase;
     color: var(--color-menu);
     text-decoration: none;
-}
-
-.page-title {
-
 }
 
 .page-title-background {
