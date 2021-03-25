@@ -24,6 +24,16 @@
         grid-auto-rows: minmax(auto);
         column-gap: 24px;
     }
+    .hero-content,
+    .section-1-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .column-50 {
+        flex: 1;
+        max-width: 45%;
+    }
     .main-page {
         grid-area: main;
         padding: 0;

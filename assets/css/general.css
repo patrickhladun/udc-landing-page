@@ -175,11 +175,11 @@ figure {
     padding: 0;
 }
 
-.navigation-link {
+.nav-item {
     margin-right: 12px;
 }
 
-.navigation-link a {
+.nav-item a {
     font-size: 14px;
     text-transform: uppercase;
     color: var(--color-menu);
