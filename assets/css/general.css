@@ -116,8 +116,10 @@ figure {
     padding: 36px 0;
 }
 
-.section {
-    padding: 200px 0;
+.content-large {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
 }
 
 .author-details {
@@ -157,21 +159,29 @@ figure {
     height: 100%;
 }
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
     grid-area: hd;
     padding: 24px 0;
+    z-index: 50;
+    transition: all 0.2s ease-in-out;
 }
+
 .header-background {
     background-color: var(--color-primary-lighter);
 }
+
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .branding img {
     max-width: 80px;
 }
+
 .navigation {
     display: flex;
     list-style-type: none;
@@ -190,6 +200,10 @@ figure {
     text-decoration: none;
 }
 
+a.is-active {
+    text-decoration: underline;
+}
+
 .page-title-background {
     background-color: var(--color-shade-lightest);
 }
@@ -202,7 +216,9 @@ figure {
 
 .main-page,
 .sidebar {
+    position: relative;
     padding: 0 36px;
+    z-index: 10;
 }
 
 .main-archive {
@@ -224,15 +240,15 @@ figure {
 .footer-background {
     background-color: var(--color-shade-darker);
 }
-
-.newsletter {
-    padding: 74px 0;
+.background-default {
+    background-color: var(--color-shade-lightest);
 }
 
 .newsletter-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 form {
