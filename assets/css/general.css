@@ -16,51 +16,33 @@ p {
 }
 
 h1 {
-    font: 28px/32px Helvetica, sans-serif;
+    font: 48px/56px 'Work Sans', sans-serif;
 }
 
 h2 {
-    font: 26px/30px Helvetica, sans-serif;
+    font: 36px/40px 'Work Sans', sans-serif;
 }
 
 h3 {
-    font: 24px/30px Helvetica, sans-serif;
-}
-
-h4 {
-    font: 20px/28px Helvetica, sans-serif;
-}
-
-h5 {
-    font: 18px/26px Helvetica, sans-serif;
-}
-
-h6 {
-    font: bold 16px/22px Helvetica, sans-serif;
+    font: 32px/38px 'Work Sans', sans-serif;
 }
 
 p:first-child,
 h1:first-child,
 h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
+h3:first-child {
     margin-top: 0;
 }
 
 p:last-child,
 h1:last-child,
 h2:last-child,
-h3:last-child,
-h4:last-child,
-h5:last-child,
-h6:last-child {
+h3:last-child {
     margin-bottom: 0;
 }
 
 a {
-    font: bold 16px/22px Arial, sans-serif;
+    font: normal 16px/22px Arial, sans-serif;
     color: var(--color-secondary);
 }
 
@@ -74,21 +56,9 @@ img {
     width: 100%;
 }
 
-blockquote {
-    border-left: 3px solid var(--color-secondary);
-    padding: 8px 24px;
-    font: 18px/26px Arial, sans-serif;
-}
-
-cite {
-    margin-top: 8px;
-    font: 16px/24px Arial, sans-serif;
-    display: block;
-}
-
-figure {
-    margin: 0;
-    padding: 0;
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -97,53 +67,14 @@ figure {
     margin: 0 auto;
 }
 
-.grid-page {
-    display: block;
-}
-
-.grid-archive {
-    display: block;
-}
-
-.blog-feed-grid {
-    display: block;
-}
-
-.section,
-.main-archive,
-.sidebar {
+.section {
     position: relative;
     padding: 36px 0;
 }
 
 .content-large {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-}
-
-.author-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    padding: 16px 0;
-}
-
-.social-links a {
-    margin-right: 8px;
-}
-
-.social-links a:last-child {
-    margin: 0;
-}
-
-.author-headshot {
-    border-radius: 100%;
+    min-height: 80vh;
+    padding: 60px 0;
 }
 
 .section-content {
@@ -158,6 +89,19 @@ figure {
     margin-left: -50vw;
     height: 100%;
 }
+
+.background-secondary {
+    background-color: var(--color-shade-lighter);
+}
+
+.background-guide {
+    background-color: var(--color-shade-lighter);
+}
+
+.background-footer {
+    background-color: var(--color-shade-darker);
+}
+
 .header {
     display: flex;
     flex-direction: column;
@@ -176,14 +120,15 @@ figure {
 }
 
 .header-background {
-    background-color: var(--color-primary-lighter);
+    background-color: var(--color-shade-lightest);
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
+
 
 .branding img {
     max-width: 80px;
@@ -196,6 +141,7 @@ figure {
     padding: 0;
 }
 
+/* Navigation */
 .nav-item {
     margin-right: 12px;
 }
@@ -205,31 +151,18 @@ figure {
     text-transform: uppercase;
     color: var(--color-menu);
     text-decoration: none;
+    opacity: 0.7;
 }
 
 a.is-active {
-    text-decoration: underline;
+    font-weight: bold;
+    opacity: 1;
 }
 
-.page-title-background {
-    background-color: var(--color-shade-lightest);
-}
-
-.page-title-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main-page,
-.sidebar {
+.main-page {
     position: relative;
     padding: 0 36px;
     z-index: 10;
-}
-
-.main-archive {
-    padding: 36px;
 }
 
 .footer {
@@ -244,18 +177,14 @@ a.is-active {
     justify-content: center;
 }
 
-.footer-background {
-    background-color: var(--color-shade-darker);
-}
-.background-default {
-    background-color: var(--color-shade-lightest);
-}
-
-.newsletter-content {
+.guide-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 form {
@@ -288,3 +217,14 @@ button:hover,
     transition: 0.3s all ease-in-out;
 }
 
+.coach {
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+    padding: 12px 0 36px 0;
+}

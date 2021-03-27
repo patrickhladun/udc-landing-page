@@ -1,4 +1,5 @@
 @import './normalize.css';
 @import './settings.css';
 @import './general.css';
-@import './media-small.css';
+@import './media-only-mobile.css';
+@import './media-desktop.css';

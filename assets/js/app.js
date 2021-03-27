@@ -28,7 +28,7 @@ const createNavItem = (section) => {
 }
 
 const options = {
-    rootMargin: '-10px 0px -88%'
+    rootMargin: '-100px 0px -88%'
 };
 
 const navToggle = (entries) => {
