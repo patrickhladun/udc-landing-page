@@ -64,9 +64,4 @@
         margin-bottom: 0;
         margin-right: 8px;
     }
-
-    .on-scroll .header {
-        padding: 4px 0;
-        transition: all 0.2s ease-in-out;  
-    }
 }

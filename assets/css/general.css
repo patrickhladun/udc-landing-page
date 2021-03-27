@@ -117,7 +117,7 @@ figure {
 }
 
 .content-large {
-    min-height: 70vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
 }
@@ -159,6 +159,8 @@ figure {
     height: 100%;
 }
 .header {
+    display: flex;
+    flex-direction: column;
     position: sticky;
     top: 0;
     left: 0;
@@ -166,6 +168,11 @@ figure {
     padding: 24px 0;
     z-index: 50;
     transition: all 0.2s ease-in-out;
+}
+
+.on-scroll .header {
+    padding: 4px 0;
+    transition: all 0.2s ease-in-out;  
 }
 
 .header-background {
