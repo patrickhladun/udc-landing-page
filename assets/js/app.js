@@ -7,6 +7,9 @@ const fragment = document.createDocumentFragment();
 const nav = document.createElement('ul');
 nav.classList.add('navigation');
 
+/**
+ * Build the navigation items based on sections
+ */
 const createNavItem = (section) => {
     const navItem = document.createElement('li');
     const navLink = document.createElement('a');
@@ -31,6 +34,9 @@ const options = {
     rootMargin: '-10px 0px -58%'
 };
 
+/**
+ * Add .is-active class to relevant menu item when the section is in viewport
+ */
 const navToggle = (entries) => {
     entries.forEach(entry => {
         const navLinkId = entry.target.id;
@@ -39,6 +45,9 @@ const navToggle = (entries) => {
     });
 }
 
+/**
+ * Use Intrsectino Observer to trigger navToggle function
+ */
 const observer = new IntersectionObserver(navToggle, options);
 
 sections.forEach( (section) => {
@@ -49,12 +58,18 @@ sections.forEach( (section) => {
 nav.appendChild(fragment);
 navContainer.appendChild(nav);
 
+/**
+ * Add a on-scroll class to the <body> tag on scroll
+ */
 window.addEventListener( 'scroll', () => {
     let scrollPosition = window.scrollY;
     const headerHeight = header.offsetHeight;
     scrollPosition >= headerHeight ? body.classList.add('on-scroll') : body.classList.remove('on-scroll');
 });
 
+/**
+ * Add smooth scroll for the navigation
+ */
 const links = document.querySelectorAll(".nav-link");
 for (const link of links) link.addEventListener( "click", clickHandler );
 
