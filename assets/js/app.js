@@ -19,7 +19,8 @@ const createNavItem = (section) => {
     const navItemClasses = navTitle.toLowerCase() === 'home' ? ['nav-item', 'nav-active'] : ['nav-item'];
     navItem.classList.add(...navItemClasses);
 
-    navLink.href = `#${navTitleDashed}`;
+    navLink.href = `#0`;
+    navLink.setAttribute('data-section', navTitleDashed);
     navLink.classList.add('nav-link', navTitleDashed);
     navLink.textContent = navTitle;
 
@@ -76,8 +77,8 @@ for (const link of links) link.addEventListener( "click", clickHandler );
 function clickHandler(e) {
     e.preventDefault();
 
-    const href = this.getAttribute("href");
-    const offsetTop = document.querySelector(href).offsetTop + 70;
+    const section = this.dataset.section;
+    const offsetTop = document.querySelector(`#${section}`).offsetTop + 70;
 
     scroll({
         top: offsetTop,
